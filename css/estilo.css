@@ -1,0 +1,20 @@
+/* En css tambien se pueden utilizar variables, se declaran como voy a escribir acontinuacion */
+
+/* :root{
+    --red: red;
+} */
+/* Y se utiliza asi */
+
+/* h1{
+    color: var(--red);
+} */
+
+/* Con las variables no se tiene que volver a escribir toda la propiedad (color en este caso) sino que se puede reutilizar con variables ya declaradas */
+
+h1{
+    color: red;
+}
+
+h2{
+    color: blue;
+}

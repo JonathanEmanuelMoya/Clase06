@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/estilo.css" rel="stylesheet">
+</head>
+
+<style>
+    /* Prueba CSS*/
+    /* Selector de etiquetas*/
+    /* h1 {
+        color: chartreuse;
+    } */
+</style>
+
+<body>
+    <div id="centrado">
+        <h1>Alta de usuarios</h1>
+
+        <form action="UsuarioServlet" method="post">
+            <fieldset>
+                <legend>Formulario de ingreso</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"><!-- Required significa que es obligatorio el campo -->
+                <!-- required maxlength="5" es capacidad máxima de caracteres -->
+                <!-- required minlength="2" es el mínimo de caracteres para escribir -->
+                <!-- required placeholder="Aqui va el nombre" es la letra grisada dentro del campo input -->
+                <br>
+                <br>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido">
+
+                <br>
+                <br>
+
+                <label for="pass">Contraseña:</label>
+                <input type="password" id="pass" name="pass" required pattern="">
+
+                <br>
+                <br>
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" max="99" min="18" required value="25">
+                <!-- Sirve en este caso para edad mínima y máxima (max y min) la propiedad "readonly="true"" sirve para que no se modifique el valor dentro del campo -->
+
+                <br>
+                <br>
+
+                <label for="sueldo">Sueldo:</label>
+                <input type="number" id="sueldo" name="sueldo" max="99999" min="1800" required value="2000" disabled>
+                <!-- disabled sirve para grisar la celda e impedir que se modifique -->
+
+                <br>
+                <br>
+
+                <label for="fnac">Fecha de nacimiento:</label>
+                <input type="date" id="fnac" name="fnac" required name="Fecha de nacimiento">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Otros datos</legend>
+                <label for="Provincia:"></label>
+                <select id="provincia" name="provincia">
+                    <option value="1">Buenos Aires,</option>
+                    <option value="2">Corrientes,</option>
+                    <option value="3">Chubut,</option>
+                </select>
+
+                <br>
+                <br>
+
+                <label for="mascota" Su mascota></label>
+                <select id="mascota" name="mascota" multiple>
+                    <!-- multiple sirve para elegir varias opciones del multiple choice -->
+                    <optgroup label="4 patas">
+                        <option value="0" selected>Por default</option>
+                        <option value="1">Perro,</option>
+                        <option value="2">Gato,</option>
+                        <option value="3">León,</option>
+                    </optgroup>
+
+                    <optgroup label="Aves">
+                        <option value="1">Loro,</option>
+                        <option value="2">Canario,</option>
+                        <option value="3">Pito we,</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <br>
+            <br>
+
+            <label for="">Color</label>
+            <input type="color">
+
+            <br>
+            <br>
+
+            <fieldset>
+                <legend>Lenguaje</legend>
+
+                <label>PHP</label>
+                <input type="checkbox" id="" name="" value="1">
+
+                <label>Java</label>
+                <input type="checkbox" id="" name="" value="2">
+
+                <label>Python</label>
+                <input type="checkbox" id="" name="" value="3">
+
+            </fieldset>
+
+            <br>
+            <br>
+
+            <fieldset>
+                <legend>Otros lenguajes</legend>
+                <label for="">Ruby</label>
+                <input type="radio" name="lp"> <!-- Mismo "name" para elegir una sola opcion -->
+                <label for="">C</label>
+                <input type="radio" name="lp">
+                <label for="">Go</label>
+                <input type="radio" name="lp">
+
+            </fieldset>
+
+            <button type="submit" class="button">Enviar</button>
+            <input type="Reset">
+
+        </form>
+    </div>
+</body>
+
+</html>
